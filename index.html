@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colors game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="rectangle">
+            <h1 class="rectangleName"></h1>
+                <img src="/colorPrjct.js/unlock.png" alt="lock" class="rectangleLock">
+        </div>
+        <div class="rectangle">
+            <h1 class="rectangleName"></h1>
+            <img src="/colorPrjct.js/unlock.png" alt="lock" class="rectangleLock">
+        </div>
+        <div class="rectangle">
+            <h1 class="rectangleName"></h1>
+            <img src="/colorPrjct.js/unlock.png" alt="lock" class="rectangleLock">
+        </div>
+        <div class="rectangle">
+            <h1 class="rectangleName"></h1>
+            <img src="/colorPrjct.js/unlock.png" alt="lock" class="rectangleLock">
+        </div>
+        <div class="rectangle">
+            <h1 class="rectangleName"></h1>
+            <img src="/colorPrjct.js/unlock.png" alt="lock" class="rectangleLock">
+        </div>
+        <script>
+            let lock = document.querySelectorAll('.rectangleLock')
+            let lockStatus = [false, false, false, false, false]    
+            lock.forEach((lockColor, index) => {
+                lockColor.addEventListener('click', () => {
+                    if (lockStatus[index]) {
+                        lockColor.src = "/colorPrjct.js/unlock.png"
+                        lockStatus[index] = false
+                    } else {
+                        lockColor.src = "/colorPrjct.js/lock.png"
+                        lockStatus[index] = true
+                    }
+                })
+            })
+            
+            
+            const background = document.querySelectorAll('.rectangle')
+            let rectangleName = document.querySelectorAll('.rectangleName')
+            const colorSystem = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F']
+            background.forEach((rectangle, index) => {
+                setInterval(() => {
+                    if (!lockStatus[index]) {
+                    let randomColor = '#' 
+                        while (randomColor.length != 7) {                                          
+                            randomIndex = Math.floor(Math.random() * colorSystem.length)                    
+                            randomColor += colorSystem[randomIndex]
+                        }
+                        rectangle.style.backgroundColor = randomColor
+                        rectangleName[index].textContent = randomColor
+                    }
+                }, 800)
+        })
+        </script>
+    </div>
+</body>
+</html>

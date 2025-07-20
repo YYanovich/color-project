@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+}
+.rectangle {
+    width: 20%;
+    height: 63rem;
+    background-color: blue; 
+}
+.rectangleLock {
+    margin-top: 35rem;
+    width: 15%;
+    margin-left: 9rem;
+}
+.rectangleName {
+    margin-left: 7rem;
+    margin-top: 15rem;
+}
