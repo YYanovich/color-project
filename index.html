@@ -10,23 +10,23 @@
     <div class="container">
         <div class="rectangle">
             <h1 class="rectangleName"></h1>
-                <img src="/colorPrjct.js/unlock.png" alt="lock" class="rectangleLock">
+                <img src="/unlock.png" alt="lock" class="rectangleLock">
         </div>
         <div class="rectangle">
             <h1 class="rectangleName"></h1>
-            <img src="/colorPrjct.js/unlock.png" alt="lock" class="rectangleLock">
+            <img src="/unlock.png" alt="lock" class="rectangleLock">
         </div>
         <div class="rectangle">
             <h1 class="rectangleName"></h1>
-            <img src="/colorPrjct.js/unlock.png" alt="lock" class="rectangleLock">
+            <img src="/unlock.png" alt="lock" class="rectangleLock">
         </div>
         <div class="rectangle">
             <h1 class="rectangleName"></h1>
-            <img src="/colorPrjct.js/unlock.png" alt="lock" class="rectangleLock">
+            <img src="/unlock.png" alt="lock" class="rectangleLock">
         </div>
         <div class="rectangle">
             <h1 class="rectangleName"></h1>
-            <img src="/colorPrjct.js/unlock.png" alt="lock" class="rectangleLock">
+            <img src="/unlock.png" alt="lock" class="rectangleLock">
         </div>
         <script>
             let lock = document.querySelectorAll('.rectangleLock')
@@ -34,10 +34,10 @@
             lock.forEach((lockColor, index) => {
                 lockColor.addEventListener('click', () => {
                     if (lockStatus[index]) {
-                        lockColor.src = "/colorPrjct.js/unlock.png"
+                        lockColor.src = "/unlock.png"
                         lockStatus[index] = false
                     } else {
-                        lockColor.src = "/colorPrjct.js/lock.png"
+                        lockColor.src = "/lock.png"
                         lockStatus[index] = true
                     }
                 })
